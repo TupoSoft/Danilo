@@ -1,0 +1,49 @@
+{
+    "private": true,
+    "name": "@tuposoft/danilo",
+    "version": "0.0.2",
+    "description": "Danilo - bot smarac za motivaciju",
+    "license": "MIT",
+    "type": "module",
+    "packageManager": "pnpm@11.7.0",
+    "engines": {
+        "node": "24.22.0",
+        "pnpm": "11.7.0"
+    },
+    "scripts": {
+        "test": "cf workers types && node --loader ts-node/esm test/pokreni.ts",
+        "provjeri-tipove": "cf workers types && tsc --noEmit",
+        "worker-razvoj": "cf dev",
+        "worker-izgradi": "cf build",
+        "worker-tipovi": "cf workers types"
+    },
+    "keywords": [
+        "Bot",
+        "Telegram",
+        "Motivacija",
+        "Posao",
+        "TupoSoft"
+    ],
+    "author": "",
+    "devDependencies": {
+        "@cloudflare/vite-plugin": "2.0.0-beta.v.8",
+        "@tsconfig/node22": "^22.0.0",
+        "@types/luxon": "3.4.2",
+        "@types/node": "^22.19.15",
+        "cf": "1.0.0-beta.26",
+        "eslint": "^9.15.0",
+        "eslint-config-love": "^107.0.0",
+        "prettier": "^3.3.3",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.7.2",
+        "vite": "8.3.5"
+    },
+    "dependencies": {
+        "@octokit/rest": "^21.0.2",
+        "grammy": "^1.32.0",
+        "hono": "4.13.14",
+        "luxon": "3.5.0",
+        "openai": "^7.47.0",
+        "zod": "^3.25.76"
+    }
+}

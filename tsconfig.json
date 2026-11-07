@@ -1,0 +1,15 @@
+{
+    "extends": "@tsconfig/node22/tsconfig.json",
+    "ts-node": { "files": true },
+    "compilerOptions": {
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "types": ["node", "vite/client"],
+        "outDir": "dist",
+        "declaration": true,
+        "noImplicitAny": true,
+        "useUnknownInCatchVariables": true,
+        "allowImportingTsExtensions": true
+    },
+    "include": ["src", "test", "cloudflare.config.ts", "vite.config.ts", ".cloudflare/types"]
+}
